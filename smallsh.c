@@ -1,5 +1,5 @@
 // Michael Childress
-// CS 344 Program 3 - smallsh
+// smallsh
 
 /*
  * NAME
