@@ -14,7 +14,7 @@
  *   (pressing Ctrl-Z). It can also terminate foreground children when a SIGINT signal is sent, but keep background children
  *   and itself active.
  * AUTHOR
- *   Written by Michael Childress (childrem@oregonstate.edu)
+ *   Written by Michael Childress
 */
 
 
@@ -52,7 +52,7 @@ int foreChildExitMethod = -5;
  *   When another SIGTSTP is sent, background command functionality is turned on again. The appropriate text messages are displayed to
  *   the user as well.
  * AUTHOR
- *   Written by Michael Childress (childrem@oregonstate.edu)
+ *   Written by Michael Childress
 */
 
 
@@ -88,7 +88,7 @@ void catchSIGTSTP(int signo) {
  *   If the command is a background one, the trailing & is removed. The function then checks for any necessary I/O redirection, and
  *   makes these changes accordingly. execvp() is called and if this fails, the function prints an error message and returns -1.
  * AUTHOR
- *   Written by Michael Childress (childrem@oregonstate.edu)
+ *   Written by Michael Childress
 */
 
 // This gets called by the child process immediately after it's created to try and run exec()
@@ -224,7 +224,7 @@ int tryToRunCommand(char** argumentArray, bool isBackground) {
  *   This function is called after every user input to make sure any $$ gets changed to the process ID of the shell before the string is
  *   tokenized.
  * AUTHOR
- *   Written by Michael Childress (childrem@oregonstate.edu)
+ *   Written by Michael Childress
 */
 
 // Scans the user input and converts any $$ to the PID of the shell process
@@ -298,7 +298,7 @@ char* dollarsToPID(char* inputString) {
  *   finished. It then checks to see if the process exited or was killed by a signal and stores this information for later retrieval by 
  *   the status command. Before the program terminates, any remaining children are cleaned up.
  * AUTHOR
- *   Written by Michael Childress (childrem@oregonstate.edu)
+ *   Written by Michael Childress
 */
 
 int main() {
